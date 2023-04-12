@@ -5,7 +5,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })
-export class SidebarComponent {
+export default class SidebarComponent {
   hide = false;
   
   @Output() hideNavbar = new EventEmitter<boolean>();
