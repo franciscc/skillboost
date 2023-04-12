@@ -1,0 +1,11 @@
+<aside>
+    <div [ngClass]="{'header-open': hide, 'header': !hide}">
+        <button (click)="onHideNavbar()"><i class="bi bi-list"></i></button>
+    </div>
+    <div class="sidebar">
+        <ul>
+            <a href="#"><li><span *ngIf="hide">Students&nbsp;</span><i class="bi bi-people-fill"></i></li></a>
+            <a href="https://www.linkedin.com/in/franciscoviola/" target="_blank"><li><span *ngIf="hide">My Profile&nbsp;</span><i class="bi bi-linkedin" id="listIcon"></i></li></a>
+        </ul>
+      </div>
+</aside>

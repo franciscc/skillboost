@@ -1,0 +1,60 @@
+aside {
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    align-items: center;   
+    justify-content: center ;
+    height: 75px;
+}
+
+.header-open {
+    display: flex;
+    align-items: center;   
+    justify-content: right ;
+    height: 75px;
+}
+
+.header-open button {
+    transform: rotate(-90deg);
+    transition: transform .2s ease-out;   
+
+}
+
+button {
+    border-radius: 50%;
+    cursor: pointer;
+    background: none;
+    font-size: 25px;
+    outline: none;
+    box-shadow: none;
+    color: white;
+    border-style: none;
+}
+
+ul {
+    padding: 0;
+}
+
+ul li {
+    font-size: 18px;
+    padding: 5px;
+    list-style: none;
+    text-decoration: none;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li:hover {
+    background: var(--hover-background-color);
+    cursor: pointer;
+    transition: background-color var(--transitions-in-seconds) ease-out;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
