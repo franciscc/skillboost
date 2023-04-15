@@ -1,0 +1,53 @@
+<h1 mat-dialog-title>New Student</h1>
+
+<!-- content -->
+<div mat-dialog-content>
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input matInput [formControl]='nameControl'>
+          <mat-error *ngIf="nameControl.invalid">Required</mat-error>
+        </mat-form-field>
+         
+        <mat-form-field appearance="fill">
+          <mat-label>LastName</mat-label>
+          <input matInput [formControl]='lastnameControl'>
+          <mat-error *ngIf="lastnameControl.invalid">Required</mat-error>
+        </mat-form-field>
+      
+        <mat-form-field appearance="fill">
+          <mat-label>DNI</mat-label>
+          <input matInput [formControl]='dniControl' type="number">
+          <mat-error *ngIf="dniControl.invalid">Required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput [formControl]='mailControl'>
+          <mat-error *ngIf="mailControl.hasError('email') && !mailControl.hasError('required')">
+            Please enter a valid email address
+          </mat-error>
+          <mat-error *ngIf="mailControl.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Phone</mat-label>
+          <input matInput [formControl]='phoneControl'>
+          <mat-error *ngIf="phoneControl.hasError('pattern') && !phoneControl.hasError('required')">
+            Please enter a valid phone number
+          </mat-error>
+          <mat-error *ngIf="phoneControl.hasError('required')">
+            Phone is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+        
+    </form>
+</div>
+
+<div mat-dialog-actions class="actions">
+  <button mat-raised-button (click)="closeDialog()">Cancel</button>
+  <button mat-raised-button cdkFocusInitial type="submit" (click)="onSubmit()">Create</button>
+</div>

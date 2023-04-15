@@ -19,7 +19,6 @@ aside {
 .header-open button {
     transform: rotate(-90deg);
     transition: transform .2s ease-out;   
-
 }
 
 button {

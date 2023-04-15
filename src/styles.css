@@ -13,4 +13,27 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     --toolbar-height: 65px;
     --transitions-in-seconds: .1s;
     --hover-background-color: #00ccff;
+    
+    --central-container-height: calc(100vh - var(--toolbar-height));
+    --central-container-width: calc(100vw - 50px);
+
+    --dark-primary-color: #512DA8;
+    --primary-color: #673AB7;
+    --light-primary-color: #D1C4E9;
+    --accent-color: #03A9F4;
+    --primary-text: #212121;
+    --secondary-text: #757575;
+
+    --login-container-width: 400px;
+    --login-container-height: 550px;
+    --login-container-border-radius: 10px;
+    --login-container-box-shadow: 0px 5px 20px;
+    --login-container-background: whitesmoke;
+    --login-container-display: grid;
+    --login-container-template-rows: 1fr 1fr 1fr 35px;
+
+    --login-button-height: 50px;
+    --login-button-width: 120px;
+    --login-button-background-hover: var(--accent-color);
+    --login-button-cursor-hover: pointer;
 }

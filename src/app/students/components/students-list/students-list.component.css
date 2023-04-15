@@ -1,0 +1,22 @@
+.list-section {
+    width: 100%;
+    height: calc(80vh);
+    border-radius: 8px;
+    box-shadow: 0px 1px 5px;
+}
+
+td {
+    text-align: center;
+    font-size: 15px;
+}
+
+th {
+    text-align: center;
+}
+
+.no-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%
+}

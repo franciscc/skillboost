@@ -3,6 +3,8 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
+import { StudentsModule } from './students/students.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -12,6 +14,8 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
     CommonModule,
     SharedModule,
+    StudentsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

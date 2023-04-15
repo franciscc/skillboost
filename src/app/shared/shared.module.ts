@@ -8,13 +8,15 @@ import { MatTableModule } from '@angular/material/table';
 import { FormsModule } from '@angular/forms';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatInputModule } from '@angular/material/input';
+import { FullnamePipe } from './pipes/fullname.pipe';
 
 
 
 @NgModule({
   declarations: [
     ToolbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    FullnamePipe
   ],
   imports: [
     CommonModule,
@@ -27,7 +29,8 @@ import { MatInputModule } from '@angular/material/input';
   ],
   exports: [
     ToolbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    FullnamePipe
   ]
 })
 export class SharedModule { }
