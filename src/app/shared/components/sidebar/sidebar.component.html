@@ -4,9 +4,10 @@
     </div>
     <div class="sidebar">
         <ul>
-            <a ><li><span *ngIf="hide">Home&nbsp;</span><i class="bi bi-house-fill"></i></li></a>
-            <a href="/students"><li><span *ngIf="hide">Students&nbsp;</span><i class="bi bi-person-circle"></i></li></a>
-            <a href="https://www.linkedin.com/in/franciscoviola/" target="_blank"><li><span *ngIf="hide">My Profile&nbsp;</span><i class="bi bi-linkedin" id="listIcon"></i></li></a>
+            <a href="/students"><li><span *ngIf="hide">Students&nbsp;</span><i class="bi bi-person-lines-fill" matTooltip="Students"></i></li></a>
+            <a href="/courses"><li><span *ngIf="hide">Courses&nbsp;</span><i class="bi bi-cart-fill" matTooltip="Courses"></i></a>
+            <a href="/benefits"><li><span *ngIf="hide">Benefits&nbsp;</span><i class="bi bi-piggy-bank-fill" matTooltip="Benefits"></i></a>
+            <a href="https://www.linkedin.com/in/franciscoviola/" target="_blank"><li><span *ngIf="hide">My Profile&nbsp;</span><i class="bi bi-linkedin" id="listIcon" matTooltip="LinkedIn"></i></li></a>
         </ul>
       </div>
-</aside>
+</aside> 

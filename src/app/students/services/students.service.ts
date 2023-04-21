@@ -61,6 +61,17 @@ export class StudentsService implements IStudentsService, OnInit{
     this.datasource$.next(updatedList);
   }
 
+  UpdateStudent(student: Student): void {
+    const i = this.datasource$.value.findIndex(x => x.id === student.id);
+    if (i !== -1) {
+      this.datasource$.value[i] = {
+        ...this.datasource$.value[i],
+        ...student
+      };
+    }
+    this.datasource$.next([...this.datasource$.value]);
+  }
+
   DeleteStudent(value: Student): void {
     const index = this.datasource$.value.indexOf(value);  
     if (index > -1) {

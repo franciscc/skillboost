@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { StudentsModule } from './students/students.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CoursesModule } from './courses/courses.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CommonModule,
     SharedModule,
     StudentsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CoursesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

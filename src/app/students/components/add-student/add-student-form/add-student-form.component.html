@@ -1,4 +1,4 @@
-<h1 mat-dialog-title>New Student</h1>
+<h1 mat-dialog-title>{{ action }} Student</h1>
 
 <!-- content -->
 <div mat-dialog-content>
@@ -49,5 +49,5 @@
 
 <div mat-dialog-actions class="actions">
   <button mat-raised-button (click)="closeDialog()">Cancel</button>
-  <button mat-raised-button cdkFocusInitial type="submit" (click)="onSubmit()">Create</button>
+  <button mat-raised-button cdkFocusInitial type="submit" (click)="onSubmit()">{{ this.action == 'New' ? 'Create' : 'Update' }}</button>
 </div>

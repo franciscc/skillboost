@@ -6,7 +6,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 * {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-famiy: Arial, Helvetica, sans-serif; */
 }
 
 :root {
@@ -36,4 +36,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     --login-button-width: 120px;
     --login-button-background-hover: var(--accent-color);
     --login-button-cursor-hover: pointer;
+
+    --student-form-height: 60vh;
+    --student-form-width: 60vw;
 }
