@@ -37,6 +37,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     --login-button-background-hover: var(--accent-color);
     --login-button-cursor-hover: pointer;
 
-    --student-form-height: 60vh;
-    --student-form-width: 60vw;
+    --dialog-form-height: 60vh;
+    --dialog-form-width: 60vw;
 }

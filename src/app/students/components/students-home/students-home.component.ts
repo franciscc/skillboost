@@ -12,8 +12,8 @@ export class StudentsHomeComponent {
 
   openDialog(): void {
     const dialogRef = this.matDialog.open(AddStudentFormComponent,{
-      height: 'var(--student-form-height)',
-      width: 'var(--student-form-width)'
+      height: 'var(--dialog-form-height)',
+      width:  'var(--dialog-form-width)'
     })
 
   }

@@ -35,8 +35,8 @@ export class StudentsListComponent implements OnInit, OnDestroy{
   editStudent(student: Student): void {
     const dialogRef = this.matDialog.open(AddStudentFormComponent, {
       data : student,
-      height: 'var(--student-form-height)',
-      width: 'var(--student-form-width)'
+      height: 'var(--dialog-form-height)',
+      width: 'var(--dialog-form-width)'
     });
   }
 

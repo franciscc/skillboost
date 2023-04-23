@@ -1,0 +1,44 @@
+<h1 mat-dialog-title>New Course</h1>
+
+<!-- content -->
+<div mat-dialog-content>
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input matInput [formControl]='nameControl'>
+          <mat-error *ngIf="nameControl.invalid">Required</mat-error>
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Description</mat-label>
+          <textarea matInput #input maxlength='285' placeholder="Ex. It makes me feel..." [formControl]="descriptionControl" maxlength="285"></textarea>
+          <mat-hint align="end">{{input.value.length}}/285</mat-hint>
+          <mat-error *ngIf="descriptionControl.invalid">Required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Duration</mat-label>
+          <input matInput [formControl]='durationInHoursControl' type="number">
+          <mat-error *ngIf="durationInHoursControl.invalid">Required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Vacancies</mat-label>
+          <input matInput [formControl]='vacanciesControl' type="number">
+          <mat-error *ngIf="vacanciesControl.invalid">Required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Price</mat-label>
+          <input matInput [formControl]='priceControl' type="number">
+          <mat-error *ngIf="priceControl.invalid">Required</mat-error>
+        </mat-form-field>
+        
+    </form>
+</div>
+
+<div mat-dialog-actions class="actions">
+  <button mat-raised-button (click)="closeDialog()">Cancel</button>
+  <button mat-raised-button cdkFocusInitial type="submit" (click)="onSubmit()">Create</button>
+</div>

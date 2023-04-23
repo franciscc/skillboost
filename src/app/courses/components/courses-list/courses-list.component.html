@@ -4,10 +4,10 @@
             <mat-card-title><h1>{{c.name}}</h1></mat-card-title>
         </mat-card-header>
         <mat-card-content>
-            <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus pariatur a dolor perferendis mollitia eaque molestiae. Expedita, magni quasi ipsam, sit ex laborum at deleniti unde, eveniet soluta temporibus! Illum odit enim vero vel accusamus, praesentium explicabo itaque placeat non.</span>
+            <span>{{c.description}}</span>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-raised-button >Show me more</button>
+            <button mat-raised-button (click)="openCourse()">Show me more</button>
         </mat-card-actions>
     </mat-card>
 </div>

@@ -1,8 +1,7 @@
-import { IfStmt } from '@angular/compiler';
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { NotificationService } from 'src/app/core/services/notification.service';
 import { Student } from 'src/app/shared/models/Student';
 import { StudentsService } from 'src/app/students/services/students.service';
 import { v4 as uuidv4 } from 'uuid';
@@ -20,7 +19,7 @@ export class AddStudentFormComponent implements OnInit{
 
     private matDialogRef : MatDialogRef<AddStudentFormComponent>, 
     private studentsService : StudentsService, 
-    private _snackBar: MatSnackBar
+    private _notificationService : NotificationService
     ) {}
   ngOnInit(): void {
     this.data != null ? this.action = 'Update' : this.action = 'New';
@@ -52,7 +51,7 @@ export class AddStudentFormComponent implements OnInit{
       
       this.closeDialog();
     }else {
-      this._snackBar.open('Ups! Nice try', 'Close')
+      this._notificationService.SendNotification('Ups! Nice try');
     }
   }
 
