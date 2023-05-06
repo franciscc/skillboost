@@ -8,7 +8,9 @@ export class AuthenticationService {
 
   constructor() { }
 
-  users: User[] = []
+  users: User[] = [
+    {id: 1, password: 'Abc12345!', username: 'coderhouse@coderhouse.com'}
+  ]
 
     login(username: string, password: string): boolean{
         return this.users.some(x => x.username == username && x.password == password)

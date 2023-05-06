@@ -10,6 +10,8 @@ import { AuthenticationService } from '../../services/authentication.service';
 })
 export class LoginComponent {
 
+  testUser: string = "coderhouse@coderhouse.com";
+  testPass: string = "Abc12345!";
   userNotExists: boolean = false;
   constructor(private authenticationService: AuthenticationService, private router: Router) {
   }
@@ -19,10 +21,10 @@ export class LoginComponent {
 
   loginTitle = "login"
 
-  username = new FormControl('',
+  username = new FormControl(this.testUser,
     [Validators.email, Validators.minLength(2), Validators.required]
   );
-  password = new FormControl('',
+  password = new FormControl(this.testPass,
     [Validators.required, Validators.minLength(2)]
   );
 

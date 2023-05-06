@@ -7,7 +7,7 @@
             <mat-form-field appearance="fill">
                 <mat-label>Email</mat-label>
                 <input matInput #input placeholder="example@example.com" [formControl]='username'>
-                <!-- <mat-error *ngIf="username.invalid">{{getUsernameErrorMessage()}}</mat-error> -->
+                <mat-error *ngIf="username.invalid">{{getUsernameErrorMessage()}}</mat-error>
             </mat-form-field>
             <mat-form-field appearance="fill">
                 <mat-label>Password</mat-label>
