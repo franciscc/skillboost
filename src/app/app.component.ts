@@ -7,9 +7,5 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  hide = false; // initial value
-  
-  onHideNavbar(hide: boolean) {
-    this.hide = hide;
-  }
+
 }

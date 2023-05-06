@@ -1,0 +1,32 @@
+<div class="login-container">
+    <div class="login-top">
+        <h1>{{createAccountTitle | uppercase}}</h1>
+    </div>
+    <div class="login-mid">
+        <form
+        [formGroup]="formGroup">
+            <mat-form-field appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput #input placeholder="example@example.com" [formControl]="username">
+                <mat-error *ngIf="username.invalid">{{getInvalidEmailErrorMessage()}}</mat-error>
+            </mat-form-field>
+            <mat-form-field hintLabel="Min {{minPasswordCharacters}} characters" appearance="fill">
+                <mat-label>Password</mat-label>
+                <input matInput #input type="password" placeholder="Password!123" [formControl]="password">
+                <mat-error *ngIf="password.invalid">{{getInvalidPasswordLengthErrorMessage()}}</mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Repeat your password</mat-label>
+                <input matInput #input type="password" placeholder="Password!123" [formControl]="repeatPassword">
+            </mat-form-field>
+        </form>
+    </div>
+    <div class="login-bottom">
+        <button mat-button (click)="onSubmit()">Create it NOW</button>
+        <span *ngIf="userAlreadyExists">Ups! User already exists</span>
+        <span *ngIf="passwordsNotMatch">Ups! Passwords are different</span>
+    </div>
+    <div class="login-bottom-link">
+        <a routerLink="/authorization/login">Already have an account? Sign in</a>
+    </div>
+</div>

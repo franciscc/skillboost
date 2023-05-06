@@ -1,0 +1,25 @@
+<div class="login-container">
+    <div class="login-top">
+        <h1>Login</h1>
+    </div>
+    <div class="login-mid">
+        <form [formGroup]="loginForm">
+            <mat-form-field appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput #input placeholder="example@example.com" [formControl]='username'>
+                <!-- <mat-error *ngIf="username.invalid">{{getUsernameErrorMessage()}}</mat-error> -->
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Password</mat-label>
+                <input matInput #input type="password" placeholder="Password!123" [formControl]='password' required>
+            </mat-form-field>
+        </form>
+    </div>
+    <div class="login-bottom">
+        <button mat-button type="submit" (click)="onSubmit()">Sign in</button>
+        <span *ngIf="userNotExists">Ups! User not found or wrong credentials</span>
+    </div>
+    <div class="login-bottom-link">
+        <a routerLink="/authorization/create-account">Don't have an account? Sign up</a>
+    </div>
+</div>

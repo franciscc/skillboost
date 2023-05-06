@@ -1,0 +1,57 @@
+.login-container {
+    height: var(--login-container-height);
+    width: var(--login-container-width);
+    border-radius: var(--login-container-border-radius);
+    box-shadow: var(--login-container-box-shadow);
+    display: var(--login-container-display);
+    grid-template-rows: var(--login-container-template-rows);
+    background: whitesmoke;
+}
+
+.login-top, .login-mid, .login-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+mat-form-field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(var(--login-container-width) - 100px);
+}
+
+.mat-mdc-button.mat-mdc-button-base {
+    height: var(--login-button-height);
+    width: var(--login-button-width);
+}
+
+.mat-mdc-button.mat-mdc-button-base:hover {
+    background: var(--login-button-background-hover);
+    cursor: var(--login-button-cursor-hover);;
+}
+
+.login-bottom-link {
+    background: var(--primary-color);
+    border-radius: 0px 0px 5px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-bottom-link a {
+    text-decoration: none;
+    color: white;
+    font-size: small;
+}
+
+.login-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-bottom span {
+    color: red;
+}

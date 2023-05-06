@@ -1,12 +1,29 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { StudentsHomeComponent } from './students/components/students-home/students-home.component';
-import { CoursesHomeComponent } from './courses/components/courses-home/courses-home.component';
-
+import { AuthorizationComponent } from './security/components/authorization/authorization.component';
+import { DashboardComponent } from './dashboard/components/dashboard.component';
 
 const routes: Routes = [
-  {path: 'students', component: StudentsHomeComponent},
-  {path: 'courses', component: CoursesHomeComponent},
+  {
+    path: '', 
+    redirectTo: 'authorization/login',
+    pathMatch: 'full'
+  },
+  {
+    path: 'authorization',
+    component: AuthorizationComponent,
+    loadChildren: () => import('./security/security.module').then((m) => m.SecurityModule)
+  },
+  {
+    path: 'dashboard', 
+    component: DashboardComponent,
+    loadChildren: () => import('./dashboard/dashboard.module').then((m) => m.DashboardModule)
+  },
+  {
+    path: '**',
+    redirectTo: 'authorization',
+    pathMatch:'full'
+  }
 ];
 
 @NgModule({
