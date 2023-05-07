@@ -1,0 +1,14 @@
+<div class="details-section">
+    <div class="title">{{course?.name | uppercase}}</div>
+    <div class="description">{{course?.description}}</div>
+    <div class="duration">The duration of this course is: {{course?.durationInHours}} hours</div>
+    <div class="footer">
+        <div class="price">{{course?.price! | money}}</div>
+        <div class="subscribe">
+            <div *ngIf="isFull; else showButton"><span><i class="bi bi-dash-circle" style="color: red"></i>&nbsp;{{buttonText}}</span></div>
+            <ng-template #showButton>
+                <button mat-raised-button>{{buttonText}}</button>
+            </ng-template>
+        </div>
+    </div>
+</div>

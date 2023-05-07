@@ -22,7 +22,8 @@ import { CoursesHomeComponent } from '../courses/components/courses-home/courses
       },
       {
         path: 'courses', 
-        component: CoursesHomeComponent
+        component: CoursesHomeComponent,
+        loadChildren: () => import('../courses/courses.module').then((m) => m.CoursesModule)
       },
     ]),
   ]

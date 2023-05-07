@@ -17,6 +17,14 @@ export class StudentsService implements IStudentsService, OnInit{
 
   private mockStudentsData: Student[] = [
     { 
+      id: '2d0a3758-8c53-1929-85cb-c20b0e08d8c2', 
+      firstName: 'Mock', 
+      lastName: 'User', 
+      dni: 22718494, 
+      mail: 'coderhouse@coderhouse.com', 
+      phoneNumber: '2478373'
+    },
+    { 
       id: '2d0a3758-8c53-4471-85cb-c20b0e08d8c2', 
       firstName: 'Francisco', 
       lastName: 'Viola', 

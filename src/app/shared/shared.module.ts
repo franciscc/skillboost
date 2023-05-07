@@ -7,26 +7,31 @@ import { FormsModule } from '@angular/forms';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatInputModule } from '@angular/material/input';
 import { FullnamePipe } from './pipes/fullname.pipe';
-
-
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
+import { MoneyPipe } from './pipes/money.pipe';
 
 @NgModule({
   declarations: [
     ToolbarComponent,
     SidebarComponent,
-    FullnamePipe
+    FullnamePipe,
+    MoneyPipe
   ],
   imports: [
     CommonModule,
     MatTableModule,
     FormsModule,
     MatTooltipModule,
-    MatInputModule
+    MatInputModule,
+    MatMenuModule,
+    MatIconModule
   ],
   exports: [
     ToolbarComponent,
     SidebarComponent,
-    FullnamePipe
+    FullnamePipe,
+    MoneyPipe,
   ]
 })
 export class SharedModule { }

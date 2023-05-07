@@ -5,6 +5,6 @@ export default class Course {
         public description : string, // 285 chars max
         public durationInHours : number,
         public vacancies : number,
-        public price : number
+        public price : number,
     ) {}
 }

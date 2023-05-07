@@ -36,9 +36,7 @@ export class LoginComponent {
   onSubmit(): void {
     if (this.loginForm.valid) {
       let userExists = this.authenticationService.login(this.username.value!, this.password.value!);
-      if (userExists) {
-        this.router.navigate(['dashboard'])
-      } else {
+      if (!userExists) {
         this.userNotExists = true;
       }
     }

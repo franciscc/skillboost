@@ -9,12 +9,16 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
+import { CourseDetailsComponent } from './components/course-details/course-details.component';
+import { RouterModule } from '@angular/router';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
     CoursesHomeComponent,
     CoursesListComponent,
-    AddCourseComponent
+    AddCourseComponent,
+    CourseDetailsComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +27,23 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatInputModule,
+    SharedModule,
     MatDialogModule,
+    RouterModule.forChild([
+      {
+        path: '',
+        redirectTo: 'list',
+        pathMatch: 'full'
+      },
+      {
+        path: 'list',
+        component: CoursesListComponent
+      },
+      {
+        path: ':id',
+        component: CourseDetailsComponent
+      }
+    ])
   ],
   exports: [
   ]

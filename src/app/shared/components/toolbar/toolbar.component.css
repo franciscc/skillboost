@@ -1,9 +1,20 @@
 header {
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10px;
 }
 
 header span {
     color: white;
     font-family: 'Bangers', cursive;
     font-size: 50px;
+}
+
+i {
+    color: white;
+    font-size: 25px;
+    margin-right: 20px;
+    cursor: pointer
 }
