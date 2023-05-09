@@ -49,7 +49,7 @@ export class CreateAccountComponent {
       
       // create new user in app.module
       let user = new User(
-        Math.round(Math.random() * 100000) + 1,
+        (Math.round(Math.random() * 100000) + 1).toString(),
         this.username.value ?? '',
         this.password.value ?? ''
       )

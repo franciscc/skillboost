@@ -1,9 +1,9 @@
 <header>
     <span>Skillboost</span>
     <div>
-        <i class="bi bi-person-circle" [matMenuTriggerFor]="menu" matTooltip="Hello {{ loggedUser }}"></i>
+        <i class="bi bi-person-circle" [matMenuTriggerFor]="menu" matTooltip="Hello {{ loggedUser?.username }}"></i>
         <mat-menu #menu="matMenu">
-            <button mat-menu-item (click)="openCourses()"><i class="bi bi-cart-fill" style="color: black"></i>My courses</button>
+            <button mat-menu-item (click)="viewMyCourses()"><i class="bi bi-cart-fill" style="color: black"></i>My courses</button>
             <button mat-menu-item (click)="logOut()"><i class="bi bi-box-arrow-left" style="color: black"></i>Logout</button>
         </mat-menu>
     </div>

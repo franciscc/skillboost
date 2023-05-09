@@ -17,15 +17,11 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    // canActivate: [AuthGuard],
     component: DashboardComponent,
+    canActivate: [AuthGuard],
     loadChildren: () => import('./dashboard/dashboard.module').then((m) => m.DashboardModule)
   },
-  // {
-  //   path: '**',
-  //   redirectTo: 'authorization',
-  //   pathMatch:'full'
-  // }
+
 ];
 
 @NgModule({

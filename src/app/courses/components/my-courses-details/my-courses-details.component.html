@@ -1,0 +1,32 @@
+<!-- add section -->
+<div class="list-section">
+    <mat-card-content *ngIf="data.length > 0; else emptyCourses">
+
+        <!-- students list -->
+        <table mat-table [dataSource]="data" class="mat-elevation-z8">
+   
+            <ng-container matColumnDef="Course">
+                <th mat-header-cell *matHeaderCellDef> Course </th>
+                <td mat-cell *matCellDef="let course"> {{ course.name }}</td>
+            </ng-container>
+
+            <ng-container matColumnDef="actions">
+              <th mat-header-cell *matHeaderCellDef></th>
+              <td mat-cell *matCellDef="let course"> 
+                <i class="bi bi-person-x" style="color:red; cursor: pointer; font-size: 20px;" (click)="unsubscribe(course)" matTooltip="Unsubscribe"></i>
+              </td>
+            </ng-container>
+            
+            <!-- <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr> -->
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+          </table>
+
+    </mat-card-content>
+
+    <ng-template #emptyCourses>
+      <div class="no-content">
+        <h5>No courses found. Try adding new ones!</h5>
+      </div>
+    </ng-template>
+</div>

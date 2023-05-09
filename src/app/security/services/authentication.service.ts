@@ -12,7 +12,7 @@ export class AuthenticationService {
 
   loggedUser!: User; 
   users: User[] = [
-    {id: 1, password: 'Abc12345!', username: 'coderhouse@coderhouse.com'}
+    {id: '1', password: 'Abc12345!', username: 'coderhouse@coderhouse.com'}
   ]
 
   private userObs$ = new BehaviorSubject<User>(this.loggedUser);
@@ -21,7 +21,7 @@ export class AuthenticationService {
         if(this.users.some(x => x.username == username && x.password == password)){
 
           const user = {
-            id: 123,
+            id: '2d0a3758-8c53-1929-85cb-c20b0e08d8c2',
             username: username,
             password: password
           };

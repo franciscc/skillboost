@@ -1,0 +1,21 @@
+.list-section {
+    width: 100%;
+    height: var(--dialog-form-height);
+    border-radius: 8px;
+}
+
+td {
+    text-align: center;
+    font-size: 15px;
+}
+
+th {
+    text-align: center;
+}
+
+.no-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%
+}

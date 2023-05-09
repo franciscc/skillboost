@@ -12,13 +12,17 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { CourseDetailsComponent } from './components/course-details/course-details.component';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
+import { MyCoursesDetailsComponent } from './components/my-courses-details/my-courses-details.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
     CoursesHomeComponent,
     CoursesListComponent,
     AddCourseComponent,
-    CourseDetailsComponent
+    CourseDetailsComponent,
+    MyCoursesDetailsComponent
   ],
   imports: [
     CommonModule,
@@ -29,6 +33,8 @@ import { SharedModule } from '../shared/shared.module';
     MatInputModule,
     SharedModule,
     MatDialogModule,
+    MatTableModule,
+    MatTooltipModule,
     RouterModule.forChild([
       {
         path: '',

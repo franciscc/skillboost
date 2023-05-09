@@ -10,6 +10,7 @@ import { FullnamePipe } from './pipes/fullname.pipe';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import { MoneyPipe } from './pipes/money.pipe';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MoneyPipe } from './pipes/money.pipe';
     MatTooltipModule,
     MatInputModule,
     MatMenuModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule
   ],
   exports: [
     ToolbarComponent,

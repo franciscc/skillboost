@@ -17,6 +17,7 @@ export class LoginComponent {
   }
 
   ngOnInit(): void {
+    this.authenticationService.logout();
   }
 
   loginTitle = "login"

@@ -7,7 +7,7 @@
         <div class="subscribe">
             <div *ngIf="isFull; else showButton"><span><i class="bi bi-dash-circle" style="color: red"></i>&nbsp;{{buttonText}}</span></div>
             <ng-template #showButton>
-                <button mat-raised-button>{{buttonText}}</button>
+                <button mat-raised-button (click)="subscribe()">{{buttonText}}</button>
             </ng-template>
         </div>
     </div>
