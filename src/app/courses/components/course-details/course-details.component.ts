@@ -16,7 +16,6 @@ export class CourseDetailsComponent implements OnInit{
     private router : ActivatedRoute,
     private courseService : CoursesService,
     private authService : AuthenticationService,
-    private notificationService : NotificationService,
   ){}
   
   course?: Course;
